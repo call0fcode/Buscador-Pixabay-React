@@ -10,6 +10,7 @@ const Paginador = ({
   terminoBusqueda,
   guardarResultadosBusqueda,
   animacion = true,
+  guardarBuscando,
 }) => {
   // No renderizar el componente si el número de páginas no es mayor a 1.
   if (totalPaginas <= 1) return null;
@@ -38,7 +39,12 @@ const Paginador = ({
   // Al cambiar de página consultar siguiente página a la API y desplazar
   // pantalla si corresponde.
   useEffect(() => {
-    consultarAPI(terminoBusqueda, paginaActual, guardarResultadosBusqueda);
+    consultarAPI(
+      terminoBusqueda,
+      paginaActual,
+      guardarResultadosBusqueda,
+      guardarBuscando
+    );
     if (animacion) {
       moverHaciaArriba();
     }

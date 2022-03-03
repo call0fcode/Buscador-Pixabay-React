@@ -67,6 +67,7 @@ function App() {
               guardarPaginaActual={guardarPaginaActual}
               guardarResultadosBusqueda={guardarResultadosBusqueda}
               animacion={false}
+              guardarBuscando={guardarBuscando}
             />
 
             <ListadoImagenes imagenes={resultadosBusqueda.hits} />
@@ -77,6 +78,7 @@ function App() {
               paginaActual={paginaActual}
               guardarPaginaActual={guardarPaginaActual}
               guardarResultadosBusqueda={guardarResultadosBusqueda}
+              guardarBuscando={guardarBuscando}
             />
           </div>
         )}
